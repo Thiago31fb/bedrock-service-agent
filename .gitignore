@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.env
+.env
+.venv/
+ENV/
+
+# Streamlit
+.streamlit/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Databases e cache
+*.db
+*.pkl
+.cache/
+
+# Logs
+*.log
+logs/

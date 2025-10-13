@@ -1,0 +1,11 @@
+requests
+streamlit
+pandas
+plotly
+
+boto3 
+langchain
+langchain-community
+langchain-aws
+
+scipy
