@@ -1,0 +1,21 @@
+# .dockerignore
+.git/
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+*.db
+.DS_Store
+Dockerfile
+docker-compose.yml
+README.md
+
+# Ignorar o banco de dados existente
+dataBase/agent_metrics.db
+dataBase/*.db

@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  chatbot-app:
+    build: .
+    ports:
+      - "8505:8501"
+    environment:
+      - AWS_REGION=${AWS_REGION}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - KNOWLEDGE_BASE_ID=${KNOWLEDGE_BASE_ID}
+      - BEDROCK_MODEL_ID=${BEDROCK_MODEL_ID}
+      - MAX_TOKENS=${MAX_TOKENS}
+      - TEMPERATURE=${TEMPERATURE}
+      - TOP_P=${TOP_P}
+      - NUMBER_OF_RESULTS=${NUMBER_OF_RESULTS}
+      - MAX_CONVERSATION_CONTEXT_HISTORY=${MAX_CONVERSATION_CONTEXT_HISTORY}
+    volumes:
+      # Volume para persistir o banco de dados
+      - ./dataBase:/app/dataBase
+      # Opcional: Volume para desenvolvimento (se quiser editar código em tempo real)
+      # - ./agent:/app/agent
+      # - ./app:/app/app
+    restart: unless-stopped
